@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonders of Asia</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:700|Inter:400,500,600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-bg"></div>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🌏 Wonders of Asia</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#team">Meet the Team</a></li>
+                <li><a href="#passport">Virtual Passport</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button></li>
+                <li id="userBtns"><button id="loginBtn">Log In</button><button id="signupBtn">Sign Up</button></li>
+                <li id="userWelcome" style="display:none;"></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Open navigation">&#9776;</button>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="carousel" id="carousel">
+            <img src="images/angkorwat.png" alt="Angkor Wat" class="carousel-img active">
+            <img src="images/borobudur.png" alt="Borobudur" class="carousel-img">
+            <img src="images/greatwallofchina.png" alt="Great Wall of China" class="carousel-img">
+            <img src="images/halongbay.png" alt="Halong Bay" class="carousel-img">
+        </div>
+        <div class="hero-text">
+            <h1>Explore Asia's Wonders</h1>
+            <p>Travel through culture, nature, and history—virtually!</p>
+            <a href="#destinations" class="cta-btn">Explore Destinations</a>
+        </div>
+        <div class="bokeh"></div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <h2>Featured Destinations</h2>
+        <div class="destination-grid">
+            <div class="destination-card" data-title="Angkor Wat" data-img="angkorwat.png" data-info="Cambodia's iconic temple complex, the largest religious monument in the world.">
+                <img src="images/angkorwat.png" alt="Angkor Wat">
+                <span>Angkor Wat</span>
+            </div>
+            <div class="destination-card" data-title="Borobudur" data-img="borobudur.png" data-info="Indonesia's massive Buddhist temple, renowned for its beautiful reliefs.">
+                <img src="images/borobudur.png" alt="Borobudur">
+                <span>Borobudur</span>
+            </div>
+            <div class="destination-card" data-title="Great Wall of China" data-img="greatwallofchina.png" data-info="A marvel of ancient engineering stretching over 21,000 km across China.">
+                <img src="images/greatwallofchina.png" alt="Great Wall">
+                <span>Great Wall of China</span>
+            </div>
+            <div class="destination-card" data-title="Halong Bay" data-img="halongbay.png" data-info="Vietnam's UNESCO World Heritage bay of limestone karsts and emerald waters.">
+                <img src="images/halongbay.png" alt="Halong Bay">
+                <span>Halong Bay</span>
+            </div>
+            <div class="destination-card" data-title="Mount Everest" data-img="mounteverest.png" data-info="The world’s highest peak, sitting on the border of Nepal and Tibet.">
+                <img src="images/mounteverest.png" alt="Mount Everest">
+                <span>Mount Everest</span>
+            </div>
+            <div class="destination-card" data-title="Mount Fuji" data-img="mountfuji.png" data-info="Japan's sacred snow-capped volcano, a symbol of the nation.">
+                <img src="images/mountfuji.png" alt="Mount Fuji">
+                <span>Mount Fuji</span>
+            </div>
+            <div class="destination-card" data-title="Petronas Twin Towers" data-img="petronastwintowers.png" data-info="Malaysia’s glittering skyscrapers, once the world’s tallest buildings.">
+                <img src="images/petronastwintowers.png" alt="Petronas Twin Towers">
+                <span>Petronas Twin Towers</span>
+            </div>
+            <div class="destination-card" data-title="Pura Ulun Danu Bratan" data-img="puraulundanubratan.png" data-info="A beautiful water temple set in Bali’s Lake Bratan.">
+                <img src="images/puraulundanubratan.png" alt="Pura Ulun Danu Bratan">
+                <span>Pura Ulun Danu Bratan</span>
+            </div>
+            <div class="destination-card" data-title="Taj Mahal" data-img="tajmahal.png" data-info="India’s majestic white marble mausoleum, an icon of love.">
+                <img src="images/tajmahal.png" alt="Taj Mahal">
+                <span>Taj Mahal</span>
+            </div>
+            <!-- 3 new destinations -->
+            <div class="destination-card" data-title="Jeju Island" data-img="jejuisland.png" data-info="South Korea’s volcanic island paradise, famous for Hallasan Mountain, scenic waterfalls, and lush natural beauty. A UNESCO World Heritage Site.">
+                <img src="images/jejuisland.png" alt="Jeju Island">
+                <span>Jeju Island</span>
+            </div>
+            <div class="destination-card" data-title="Marina Bay Sands" data-img="marinabaysands.png" data-info="Singapore’s most famous architectural landmark. Enjoy breathtaking city views from the SkyPark and the world’s highest infinity pool.">
+                <img src="images/marinabaysands.png" alt="Marina Bay Sands">
+                <span>Marina Bay Sands</span>
+            </div>
+            <div class="destination-card" data-title="Banaue Rice Terraces" data-img="BanaueRice.png" data-info="The 2,000-year-old Banaue Rice Terraces of the Philippines, carved by hand into the mountains. Often called the ‘Eighth Wonder of the World.’">
+                <img src="images/BanaueRice.png" alt="Banaue Rice Terraces">
+                <span>Banaue Rice Terraces</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Destination Info -->
+    <div id="destinationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <img id="modalImg" src="" alt="">
+            <h3 id="modalTitle"></h3>
+            <p id="modalInfo"></p>
+        </div>
+    </div>
+
+    <!-- Meet the Team -->
+    <section id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-row">
+            <div class="team-card">
+                <div class="team-front">
+                    <div class="team-pic team-pic-zoom">
+                        <img src="images/yingzen.png" alt="Ying Zen">
+                    </div>
+                    <h4>Ying Zen</h4>
+                </div>
+                <div class="team-back">
+                    <p>Hi, I'm Ying Zen, passionate about travel tech, UI/UX, and creative web design. My goal is to connect cultures and make travel inspiration accessible through engaging digital experiences.</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-front">
+                    <div class="team-pic team-pic-down">
+                        <img src="images/dhanesh.png" alt="Dhanesh">
+                    </div>
+                    <h4>Dhanesh</h4>
+                </div>
+                <div class="team-back">
+                    <p>Hi, I'm Dhanesh! I love exploring new places, learning about different cultures, and bringing awesome ideas to life with code. Let's make Asia’s wonders go digital together!</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-front">
+                    <div class="team-pic">
+                        <img src="images/shiming.png" alt="Shi Ming">
+                    </div>
+                    <h4>Shi Ming</h4>
+                </div>
+                <div class="team-back">
+                    <p>Hi, I'm Shi Ming, coder and designer. My passion is building interactive experiences and solving real problems with tech—especially when it means sharing the world’s coolest destinations!</p>
+                </div>
+            </div>
+            <div class="team-card">
+                <div class="team-front">
+                    <div class="team-pic">
+                        <img src="images/zhishen.png" alt="Zhi Shen">
+                    </div>
+                    <h4>Zhi Shen</h4>
+                </div>
+                <div class="team-back">
+                    <p>Hello! I'm Zhi Shen, a creative mind with a love for design, teamwork, and adventure. I believe the best journeys are the ones we share, both on screen and off.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Passport Section -->
+    <section id="passport">
+        <h2>Your Virtual Passport</h2>
+        <div class="passport-grid">
+            <div class="stamp" data-title="Angkor Wat" data-fact="Did you know? Angkor Wat is oriented to the west, unlike most temples, and its intricate bas-reliefs cover more than 600 meters.">
+                <img src="images/angkorwat.png" alt="Angkor Wat">
+                <span>Angkor Wat</span>
+            </div>
+            <div class="stamp" data-title="Marina Bay Sands" data-fact="Marina Bay Sands’ SkyPark is longer than the Eiffel Tower is tall, and its infinity pool is the world’s largest at this height!">
+                <img src="images/marinabaysands.png" alt="Marina Bay Sands">
+                <span>Marina Bay Sands</span>
+            </div>
+            <div class="stamp" data-title="Jeju Island" data-fact="Jeju Island was formed from volcanic eruptions and has over 360 smaller 'oreum' (parasitic cones) dotting its landscape.">
+                <img src="images/jejuisland.png" alt="Jeju Island">
+                <span>Jeju Island</span>
+            </div>
+            <div class="stamp" data-title="Banaue Rice Terraces" data-fact="The terraces were built largely by hand more than 2,000 years ago and would stretch halfway around the world if placed end to end!">
+                <img src="images/BanaueRice.png" alt="Banaue Rice Terraces">
+                <span>Banaue Rice Terraces</span>
+            </div>
+            <div class="stamp" data-title="Taj Mahal" data-fact="The Taj Mahal changes color at different times of the day—pinkish in the morning, milky white at night.">
+                <img src="images/tajmahal.png" alt="Taj Mahal">
+                <span>Taj Mahal</span>
+            </div>
+            <div class="stamp" data-title="Mount Fuji" data-fact="Mount Fuji is an active stratovolcano and is climbed by more than 300,000 people every year.">
+                <img src="images/mountfuji.png" alt="Mount Fuji">
+                <span>Mount Fuji</span>
+            </div>
+        </div>
+        <div id="stampModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal" id="closeStampModal">&times;</span>
+                <h3 id="stampTitle"></h3>
+                <p id="stampFact"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm" novalidate>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <span class="error" id="messageError"></span>
+            </div>
+            <button type="submit" class="cta-btn">Send Message</button>
+            <span id="formSuccess"></span>
+        </form>
+    </section>
+
+    <!-- Login/Signup Modal (unchanged) -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content modal-form">
+            <span class="close-modal" id="closeLogin">&times;</span>
+            <h3>Log In</h3>
+            <input type="text" id="loginUser" placeholder="Username">
+            <input type="password" id="loginPass" placeholder="Password">
+            <button id="doLogin">Log In</button>
+            <p>Don't have an account? <span class="modal-link" id="openSignup">Sign up</span></p>
+            <span class="error" id="loginError"></span>
+        </div>
+    </div>
+    <div id="signupModal" class="modal">
+        <div class="modal-content modal-form">
+            <span class="close-modal" id="closeSignup">&times;</span>
+            <h3>Sign Up</h3>
+            <input type="text" id="signupUser" placeholder="Username">
+            <input type="password" id="signupPass" placeholder="Password">
+            <button id="doSignup">Sign Up</button>
+            <p>Already have an account? <span class="modal-link" id="openLogin">Log in</span></p>
+            <span class="error" id="signupError"></span>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <button id="backToTop" title="Go to top">↑</button>
+
+    <footer>
+        <p>&copy; 2025 Wonders of Asia. Designed by Group 63.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
